@@ -1,6 +1,27 @@
 ﻿services:
-  urlshortening:
-    image: urlshortening
+  url-shortening:
+    image: url-shortening
+    container_name: url-shortening
+    ports:
+      - "5431:8080"
+    links:
+      - "db:database"
     build:
       context: .
       dockerfile: URLShortening/Dockerfile
+  db:
+    image: postgres:latest
+    container_name: db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data/pgdata 
+    environment:
+      POSTGRES_USER: url-shortening
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: url-shortening-db
+      PGDATA: /var/lib/postgresql/data/pgdata
+      
+volumes:
+  pgdata:
+    driver: local
