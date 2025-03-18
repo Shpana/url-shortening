@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using URLShortening.Models.Internal;
-using URLShortening.Models.Requests;
-using URLShortening.Models.Responses;
 
-namespace URLShortening.Controller;
+namespace URLShortening;
 
 [Route("shorten/v1")]
 [ApiController]

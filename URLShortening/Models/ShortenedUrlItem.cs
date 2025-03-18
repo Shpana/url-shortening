@@ -1,4 +1,4 @@
-﻿namespace URLShortening.Models.Internal;
+﻿namespace URLShortening;
 
 public class ShortenedUrlItem
 {

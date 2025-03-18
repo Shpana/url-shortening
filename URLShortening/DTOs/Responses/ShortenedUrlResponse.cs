@@ -1,7 +1,6 @@
 ﻿using System.Text.Json.Serialization;
-using URLShortening.Models.Internal;
 
-namespace URLShortening.Models.Responses;
+namespace URLShortening;
 
 public class ShortenedUrlResponse
 {

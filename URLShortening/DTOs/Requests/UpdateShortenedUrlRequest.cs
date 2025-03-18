@@ -1,8 +1,8 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace URLShortening.Models.Requests;
+namespace URLShortening;
 
-public class CreateShortenedUrlRequest
+public class UpdateShortenedUrlRequest
 {
     [JsonPropertyName("url")]
     public string OriginalUrl { get; set; }
